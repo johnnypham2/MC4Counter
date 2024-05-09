@@ -11,6 +11,10 @@ const Counter = () => {
     setCounter((prevCounter) => (prevCounter > 0 ? prevCounter - 1 : 0));
   };
 
+  const resetCounter = () => {
+    setCounter(0);
+  };
+
   return (
     <>
       <div className="d-grid gap-2 col-6 mx-auto">
@@ -20,15 +24,23 @@ const Counter = () => {
           type="button"
           onClick={increaseNumber}
         >
-          Increase me bruh
+          +
         </button>
         <button
           className="btn btn-danger"
           type="button"
           onClick={decreaseNumber}
         >
-          Decrease me breh
+          -
         </button>
+        <button
+          className="btn btn-dark"
+          type="button"
+          onClick={resetCounter}
+        >
+          Reset Counter
+        </button>
+        
       </div>
     </>
   );
