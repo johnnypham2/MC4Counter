@@ -4,7 +4,7 @@ const Counter = () => {
   const [counter, setCounter] = useState(0);
 
   const increaseNumber = () => {
-    setCounter(counter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
   };
 
   const decreaseNumber = () => {
